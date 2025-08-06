@@ -14,13 +14,14 @@ export const connectDB = async () => {
       password:process.env.PASSWORD,
       database:process.env.DB_NAME,
     });
-    console.log('✅ DB connected');
+    console.log(' DB connected');
   } catch (error) {
-    console.error('❌ DB connection failed:', error.message);
+    console.error(' DB connection failed:', error.message);
   }
 };
 
 export const getDB = () => {
   return db;
 };
+
 
