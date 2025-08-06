@@ -9,6 +9,7 @@ export const connectDB = async () => {
   try {
     db = await mysql.createConnection({
       host:process.env.HOST,
+       port:process.env.PORT_DB,
       user:process.env.USER,
       password:process.env.PASSWORD,
       database:process.env.DB_NAME,
@@ -22,3 +23,4 @@ export const connectDB = async () => {
 export const getDB = () => {
   return db;
 };
+
